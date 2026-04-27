@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "echo 'No frontend build on Vercel (frontend lives on Firebase Hosting)'",
+  "outputDirectory": "public_empty",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/api", "destination": "/api/index.js" },
+    { "source": "/api/(.*)", "destination": "/api/index.js" }
+  ]
+}

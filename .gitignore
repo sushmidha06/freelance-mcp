@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.production
+
+# Firebase service account keys — NEVER commit
+*firebase-adminsdk*.json
+service-account*.json
+
+# Build output
+dist/
+build/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python virtualenv
+venv/
+.venv/
+env/
+
+# Logs
+*.log
+npm-debug.log*
+.vercel

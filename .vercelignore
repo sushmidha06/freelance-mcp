@@ -1,0 +1,15 @@
+dist
+public
+src
+python_ai
+index.html
+vite.config.js
+tailwind.config.js
+postcss.config.js
+firebase.json
+.firebaserc
+firestore.rules
+Dockerfile
+docker-compose.yml
+*firebase-adminsdk*.json
+service-account*.json

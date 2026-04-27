@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: sushmi-mcp-ai
+    runtime: docker
+    dockerfilePath: python_ai/Dockerfile
+    dockerContext: python_ai
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false        # set in Render dashboard
+      - key: JWT_SHARED_SECRET
+        sync: false        # must match Vercel's value
+      - key: NODE_API_BASE_URL
+        value: https://sushmi-mcp.vercel.app/api
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_EMBED_MODEL
+        value: models/gemini-embedding-001
+      - key: CHROMA_API_KEY
+        sync: false        # set in Render dashboard (Chroma Cloud → Settings → API keys)
+      - key: CHROMA_TENANT
+        sync: false
+      - key: CHROMA_DATABASE
+        value: freelance-mcp
